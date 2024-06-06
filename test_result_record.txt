@@ -1,0 +1,688 @@
+niuzixiong@niuzixiong-virtual-machine:~/Downloads/DBlab/acmdb-lab5$ ant test
+Buildfile: /home/niuzixiong/Downloads/DBlab/acmdb-lab5/build.xml
+
+compile:
+
+testcompile:
+
+test:
+    [junit] Running simpledb.AggregateTest
+    [junit] Testsuite: simpledb.AggregateTest
+    [junit] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.129 sec
+    [junit] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.129 sec
+    [junit] 
+    [junit] Testcase: rewind took 0.059 sec
+    [junit] Testcase: getTupleDesc took 0.003 sec
+    [junit] Testcase: countStringAggregate took 0.006 sec
+    [junit] Testcase: sumStringGroupBy took 0.002 sec
+    [junit] Testcase: sumAggregate took 0.001 sec
+    [junit] Testcase: avgAggregate took 0.001 sec
+    [junit] Testcase: maxAggregate took 0.002 sec
+    [junit] Testcase: minAggregate took 0.001 sec
+    [junit] Running simpledb.BTreeDeadlockTest
+    [junit] Testsuite: simpledb.BTreeDeadlockTest
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.135 sec
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.135 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] testReadWriteDeadlock constructing deadlock:
+    [junit] testReadWriteDeadlock resolved deadlock
+    [junit] ------------- ---------------- ---------------
+    [junit] ------------- Standard Error -----------------
+    [junit] simpledb.TransactionAbortedException
+    [junit] 	at simpledb.LockManager.acquireLock(LockManager.java:103)
+    [junit] 	at simpledb.BufferPool.getPage(BufferPool.java:94)
+    [junit] 	at simpledb.BTreeFile.getPage(BTreeFile.java:502)
+    [junit] 	at simpledb.BTreeFile.getParentWithEmptySlots(BTreeFile.java:414)
+    [junit] 	at simpledb.BTreeFile.splitLeafPage(BTreeFile.java:305)
+    [junit] 	at simpledb.BTreeFile.insertTuple(BTreeFile.java:538)
+    [junit] 	at simpledb.BufferPool.insertTuple(BufferPool.java:220)
+    [junit] 	at simpledb.BTreeUtility$BTreeWriter.run(BTreeUtility.java:522)
+    [junit] simpledb.TransactionAbortedException
+    [junit] 	at simpledb.LockManager.acquireLock(LockManager.java:71)
+    [junit] 	at simpledb.BufferPool.getPage(BufferPool.java:90)
+    [junit] 	at simpledb.BTreeFile.getPage(BTreeFile.java:502)
+    [junit] 	at simpledb.BTreeFile.findLeafPage(BTreeFile.java:202)
+    [junit] 	at simpledb.BTreeFile.insertTuple(BTreeFile.java:536)
+    [junit] 	at simpledb.BufferPool.insertTuple(BufferPool.java:220)
+    [junit] 	at simpledb.BTreeUtility$BTreeWriter.run(BTreeUtility.java:522)
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testReadWriteDeadlock took 9.098 sec
+    [junit] Running simpledb.BTreeFileDeleteTest
+    [junit] Testsuite: simpledb.BTreeFileDeleteTest
+    [junit] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.577 sec
+    [junit] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.577 sec
+    [junit] 
+    [junit] Testcase: testStealFromLeftLeafPage took 0.235 sec
+    [junit] Testcase: testStealFromRightLeafPage took 0.026 sec
+    [junit] Testcase: testMergeLeafPages took 0.055 sec
+    [junit] Testcase: testStealFromLeftInternalPage took 0.806 sec
+    [junit] Testcase: testStealFromRightInternalPage took 0.603 sec
+    [junit] Testcase: testMergeInternalPages took 0.765 sec
+    [junit] Testcase: deleteTuple took 0.036 sec
+    [junit] Running simpledb.BTreeFileInsertTest
+    [junit] Testsuite: simpledb.BTreeFileInsertTest
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.23 sec
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.23 sec
+    [junit] 
+    [junit] Testcase: testSplitInternalPages took 1.1 sec
+    [junit] Testcase: testReusePage took 0.062 sec
+    [junit] Testcase: testSplitLeafPages took 0.025 sec
+    [junit] Running simpledb.BTreeFileReadTest
+    [junit] Testsuite: simpledb.BTreeFileReadTest
+    [junit] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.534 sec
+    [junit] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.534 sec
+    [junit] 
+    [junit] Testcase: testIteratorBasic took 0.208 sec
+    [junit] Testcase: testIteratorClose took 0.099 sec
+    [junit] Testcase: indexIterator took 0.067 sec
+    [junit] Testcase: readPage took 0.029 sec
+    [junit] Testcase: numPages took 0.016 sec
+    [junit] Testcase: getTupleDesc took 0.012 sec
+    [junit] Testcase: getId took 0.038 sec
+    [junit] Running simpledb.BTreeHeaderPageTest
+    [junit] Testsuite: simpledb.BTreeHeaderPageTest
+    [junit] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.221 sec
+    [junit] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.221 sec
+    [junit] 
+    [junit] Testcase: getNextPageId took 0.107 sec
+    [junit] Testcase: setPrevPageId took 0.004 sec
+    [junit] Testcase: setNextPageId took 0.003 sec
+    [junit] Testcase: numSlots took 0.001 sec
+    [junit] Testcase: getEmptySlot took 0.013 sec
+    [junit] Testcase: getPageData took 0.013 sec
+    [junit] Testcase: testDirty took 0.003 sec
+    [junit] Testcase: getPrevPageId took 0.002 sec
+    [junit] Testcase: getId took 0.002 sec
+    [junit] Testcase: getSlot took 0.009 sec
+    [junit] Running simpledb.BTreeInternalPageTest
+    [junit] Testsuite: simpledb.BTreeInternalPageTest
+    [junit] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.526 sec
+    [junit] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.526 sec
+    [junit] 
+    [junit] Testcase: getParentId took 0.115 sec
+    [junit] Testcase: setParentId took 0.004 sec
+    [junit] Testcase: testIterator took 0.006 sec
+    [junit] Testcase: testReverseIterator took 0.007 sec
+    [junit] Testcase: getNumEmptySlots took 0.003 sec
+    [junit] Testcase: testDirty took 0.003 sec
+    [junit] Testcase: deleteNonexistentEntry took 0.006 sec
+    [junit] Testcase: deleteEntry took 0.003 sec
+    [junit] Testcase: getId took 0.002 sec
+    [junit] Testcase: addEntry took 0.305 sec
+    [junit] Testcase: getSlot took 0.003 sec
+    [junit] Running simpledb.BTreeLeafPageTest
+    [junit] Testsuite: simpledb.BTreeLeafPageTest
+    [junit] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.363 sec
+    [junit] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.363 sec
+    [junit] 
+    [junit] Testcase: getParentId took 0.109 sec
+    [junit] Testcase: getLeftSiblingId took 0.007 sec
+    [junit] Testcase: getRightSiblingId took 0.003 sec
+    [junit] Testcase: setParentId took 0.004 sec
+    [junit] Testcase: setLeftSiblingId took 0.001 sec
+    [junit] Testcase: setRightSiblingId took 0.004 sec
+    [junit] Testcase: testIterator took 0.011 sec
+    [junit] Testcase: getNumEmptySlots took 0.004 sec
+    [junit] Testcase: testDirty took 0.004 sec
+    [junit] Testcase: addTuple took 0.132 sec
+    [junit] Testcase: deleteNonexistentTuple took 0.002 sec
+    [junit] Testcase: deleteTuple took 0.002 sec
+    [junit] Testcase: getId took 0.002 sec
+    [junit] Testcase: getSlot took 0.004 sec
+    [junit] Running simpledb.BTreeNextKeyLockingTest
+    [junit] Testsuite: simpledb.BTreeNextKeyLockingTest
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.792 sec
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.792 sec
+    [junit] 
+    [junit] Testcase: nextKeyLockingTestGreaterThan took 2.224 sec
+    [junit] Testcase: nextKeyLockingTestLessThan took 1.531 sec
+    [junit] Running simpledb.BTreePageIdTest
+    [junit] Testsuite: simpledb.BTreePageIdTest
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.074 sec
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.074 sec
+    [junit] 
+    [junit] Testcase: getTableId took 0.02 sec
+    [junit] Testcase: pageno took 0.001 sec
+    [junit] Testcase: testHashCode took 0 sec
+    [junit] Testcase: equals took 0 sec
+    [junit] Running simpledb.BTreeRootPtrPageTest
+    [junit] Testsuite: simpledb.BTreeRootPtrPageTest
+    [junit] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.173 sec
+    [junit] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.173 sec
+    [junit] 
+    [junit] Testcase: setRootId took 0.109 sec
+    [junit] Testcase: getHeaderId took 0.001 sec
+    [junit] Testcase: setHeaderId took 0.001 sec
+    [junit] Testcase: testDirty took 0.002 sec
+    [junit] Testcase: getRootId took 0.001 sec
+    [junit] Testcase: getId took 0 sec
+    [junit] Running simpledb.BufferPoolWriteTest
+    [junit] Testsuite: simpledb.BufferPoolWriteTest
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.511 sec
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.511 sec
+    [junit] 
+    [junit] Testcase: deleteTuple took 0.355 sec
+    [junit] Testcase: handleManyDirtyPages took 0.039 sec
+    [junit] Testcase: insertTuple took 0.084 sec
+    [junit] Running simpledb.CatalogTest
+    [junit] Testsuite: simpledb.CatalogTest
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.085 sec
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.085 sec
+    [junit] 
+    [junit] Testcase: getTupleDesc took 0.027 sec
+    [junit] Testcase: getDatabaseFile took 0.001 sec
+    [junit] Testcase: handleDuplicateNames took 0.001 sec
+    [junit] Testcase: handleDuplicateIds took 0.001 sec
+    [junit] Testcase: getTableId took 0.001 sec
+    [junit] Running simpledb.DeadlockTest
+    [junit] Testsuite: simpledb.DeadlockTest
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.656 sec
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.656 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] testReadWriteDeadlock constructing deadlock:
+    [junit] testReadWriteDeadlock resolved deadlock
+    [junit] testWriteWriteDeadlock constructing deadlock:
+    [junit] testWriteWriteDeadlock resolved deadlock
+    [junit] testUpgradeWriteDeadlock constructing deadlock:
+    [junit] testUpgradeWriteDeadlock resolved deadlock
+    [junit] ------------- ---------------- ---------------
+    [junit] ------------- Standard Error -----------------
+    [junit] simpledb.TransactionAbortedException
+    [junit] 	at simpledb.LockManager.acquireLock(LockManager.java:103)
+    [junit] 	at simpledb.BufferPool.getPage(BufferPool.java:94)
+    [junit] 	at simpledb.TestUtil$LockGrabber.run(TestUtil.java:336)
+    [junit] simpledb.TransactionAbortedException
+    [junit] 	at simpledb.LockManager.acquireLock(LockManager.java:103)
+    [junit] 	at simpledb.BufferPool.getPage(BufferPool.java:94)
+    [junit] 	at simpledb.TestUtil$LockGrabber.run(TestUtil.java:336)
+    [junit] simpledb.TransactionAbortedException
+    [junit] 	at simpledb.LockManager.acquireLock(LockManager.java:103)
+    [junit] 	at simpledb.BufferPool.getPage(BufferPool.java:94)
+    [junit] 	at simpledb.TestUtil$LockGrabber.run(TestUtil.java:336)
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testReadWriteDeadlock took 0.966 sec
+    [junit] Testcase: testWriteWriteDeadlock took 0.868 sec
+    [junit] Testcase: testUpgradeWriteDeadlock took 0.779 sec
+    [junit] Running simpledb.FilterTest
+    [junit] Testsuite: simpledb.FilterTest
+    [junit] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.091 sec
+    [junit] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.091 sec
+    [junit] 
+    [junit] Testcase: filterAllLessThan took 0.032 sec
+    [junit] Testcase: filterEqual took 0.005 sec
+    [junit] Testcase: filterEqualNoTuples took 0.001 sec
+    [junit] Testcase: filterSomeLessThan took 0.001 sec
+    [junit] Testcase: getTupleDesc took 0.002 sec
+    [junit] Testcase: rewind took 0.001 sec
+    [junit] Running simpledb.HashEquiJoinTest
+    [junit] Testsuite: simpledb.HashEquiJoinTest
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.707 sec
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.707 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] JOIN PRODUCED 300010 ROWS
+    [junit] JOIN PRODUCED 300010 ROWS
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: bigJoin took 3.662 sec
+    [junit] Testcase: getTupleDesc took 0.001 sec
+    [junit] Testcase: eqJoin took 0.002 sec
+    [junit] Running simpledb.HeapFileReadTest
+    [junit] Testsuite: simpledb.HeapFileReadTest
+    [junit] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.239 sec
+    [junit] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.239 sec
+    [junit] 
+    [junit] Testcase: readPage took 0.129 sec
+    [junit] Testcase: getTupleDesc took 0.004 sec
+    [junit] Testcase: numPages took 0.004 sec
+    [junit] Testcase: testIteratorBasic took 0.015 sec
+    [junit] Testcase: testIteratorClose took 0.032 sec
+    [junit] Testcase: getId took 0.007 sec
+    [junit] Running simpledb.HeapFileWriteTest
+    [junit] Testsuite: simpledb.HeapFileWriteTest
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.286 sec
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.286 sec
+    [junit] 
+    [junit] Testcase: addTuple took 0.253 sec
+    [junit] Running simpledb.HeapPageIdTest
+    [junit] Testsuite: simpledb.HeapPageIdTest
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.061 sec
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.061 sec
+    [junit] 
+    [junit] Testcase: testHashCode took 0.017 sec
+    [junit] Testcase: pageno took 0.001 sec
+    [junit] Testcase: getTableId took 0 sec
+    [junit] Testcase: equals took 0.001 sec
+    [junit] Running simpledb.HeapPageReadTest
+    [junit] Testsuite: simpledb.HeapPageReadTest
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.108 sec
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.108 sec
+    [junit] 
+    [junit] Testcase: getNumEmptySlots took 0.046 sec
+    [junit] Testcase: testIterator took 0.006 sec
+    [junit] Testcase: getId took 0.002 sec
+    [junit] Testcase: getSlot took 0.004 sec
+    [junit] Running simpledb.HeapPageWriteTest
+    [junit] Testsuite: simpledb.HeapPageWriteTest
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.284 sec
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.284 sec
+    [junit] 
+    [junit] Testcase: deleteNonexistentTuple took 0.13 sec
+    [junit] Testcase: deleteTuple took 0.007 sec
+    [junit] Testcase: testDirty took 0.008 sec
+    [junit] Testcase: addTuple took 0.095 sec
+    [junit] Running simpledb.InsertTest
+    [junit] Testsuite: simpledb.InsertTest
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.174 sec
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.174 sec
+    [junit] 
+    [junit] Testcase: getNext took 0.133 sec
+    [junit] Testcase: getTupleDesc took 0.006 sec
+    [junit] Running simpledb.IntHistogramTest
+    [junit] Testsuite: simpledb.IntHistogramTest
+    [junit] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.53 sec
+    [junit] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.53 sec
+    [junit] 
+    [junit] Testcase: orderOfGrowthTest took 0.475 sec
+    [junit] Testcase: opLessThanTest took 0 sec
+    [junit] Testcase: opEqualsTest took 0 sec
+    [junit] Testcase: negativeRangeTest took 0 sec
+    [junit] Testcase: opGreaterThanTest took 0 sec
+    [junit] Testcase: opGreaterThanOrEqualsTest took 0.001 sec
+    [junit] Testcase: opLessThanOrEqualsTest took 0 sec
+    [junit] Testcase: opNotEqualsTest took 0 sec
+    [junit] Running simpledb.IntegerAggregatorTest
+    [junit] Testsuite: simpledb.IntegerAggregatorTest
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.082 sec
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.082 sec
+    [junit] 
+    [junit] Testcase: mergeSum took 0.027 sec
+    [junit] Testcase: mergeMin took 0.002 sec
+    [junit] Testcase: mergeMax took 0.002 sec
+    [junit] Testcase: mergeAvg took 0.003 sec
+    [junit] Testcase: testIterator took 0.001 sec
+    [junit] Running simpledb.JoinOptimizerTest
+    [junit] Testsuite: simpledb.JoinOptimizerTest
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 31.882 sec
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 31.882 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] tableId1: -863902428
+    [junit] tableId2: -1609847345
+    [junit] Added scan of table a
+    [junit] Added scan of table b
+    [junit] Added scan of table c
+    [junit] Added scan of table d
+    [junit] Added scan of table e
+    [junit] Added scan of table f
+    [junit] Added scan of table g
+    [junit] Added scan of table h
+    [junit] Added scan of table i
+    [junit] Added join between a.c1 and b.c1
+    [junit] Added join between b.c0 and c.c0
+    [junit] Added join between c.c1 and d.c1
+    [junit] Added join between d.c0 and e.c0
+    [junit] Added join between e.c1 and f.c1
+    [junit] Added join between f.c0 and g.c0
+    [junit] Added join between g.c1 and h.c1
+    [junit] Added join between h.c0 and i.c0
+    [junit] Aggregate field is a.c0, agg fun is : COUNT
+    [junit] Added select list field a.c0
+    [junit] 	 with aggregator COUNT
+    [junit] tableId1: 707281964
+    [junit] tableId2: 2113370299
+    [junit] Added scan of table t1
+    [junit] Added scan of table t2
+    [junit] Added join between t1.c1 and t2.c2
+    [junit] Added select list field null.*
+    [junit] Added scan of table t1
+    [junit] Added scan of table t2
+    [junit] Added join between t1.c1 and t2.c2
+    [junit] Added select list field null.*
+    [junit] Added scan of table t1
+    [junit] Added scan of table t2
+    [junit] Added join between t1.c3 and t2.c4
+    [junit] Added select list field null.*
+    [junit] Added scan of table t1
+    [junit] Added scan of table t2
+    [junit] Added join between t1.c8 and t2.c7
+    [junit] Added select list field null.*
+    [junit] tableId1: -178335262
+    [junit] tableId2: 1662620866
+    [junit] Added scan of table t1
+    [junit] Added scan of table t2
+    [junit] Added join between t1.c8 and t2.c7
+    [junit] Added select list field null.*
+    [junit] tableId1: -61436519
+    [junit] tableId2: 1724726933
+    [junit] Added scan of table emp
+    [junit] Added scan of table dept
+    [junit] Added scan of table hobbies
+    [junit] Added scan of table hobby
+    [junit] Added join between emp.c1 and dept.c0
+    [junit] Added join between hobbies.c0 and emp.c2
+    [junit] Added join between hobbies.c1 and hobby.c0
+    [junit] Added select list field null.*
+    [junit] tableId1: 1825480729
+    [junit] tableId2: -1207697637
+    [junit] Added scan of table bigTable
+    [junit] Added scan of table a
+    [junit] Added scan of table b
+    [junit] Added scan of table c
+    [junit] Added scan of table d
+    [junit] Added scan of table e
+    [junit] Added scan of table f
+    [junit] Added scan of table g
+    [junit] Added scan of table h
+    [junit] Added scan of table i
+    [junit] Added scan of table j
+    [junit] Added scan of table k
+    [junit] Added scan of table l
+    [junit] Added scan of table m
+    [junit] Added scan of table n
+    [junit] Added join between bigTable.c0 and n.c0
+    [junit] Added join between a.c1 and b.c1
+    [junit] Added join between b.c0 and c.c0
+    [junit] Added join between c.c1 and d.c1
+    [junit] Added join between d.c0 and e.c0
+    [junit] Added join between e.c1 and f.c1
+    [junit] Added join between f.c0 and g.c0
+    [junit] Added join between g.c1 and h.c1
+    [junit] Added join between h.c0 and i.c0
+    [junit] Added join between i.c1 and j.c1
+    [junit] Added join between j.c0 and k.c0
+    [junit] Added join between k.c1 and l.c1
+    [junit] Added join between l.c0 and m.c0
+    [junit] Added join between m.c1 and n.c1
+    [junit] Aggregate field is a.c0, agg fun is : COUNT
+    [junit] Added select list field a.c0
+    [junit] 	 with aggregator COUNT
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: nonequalityOrderJoinsTest took 1.431 sec
+    [junit] Testcase: estimateJoinCostTest took 0.637 sec
+    [junit] Testcase: estimateJoinCardinality took 0.575 sec
+    [junit] Testcase: orderJoinsTest took 4.813 sec
+    [junit] Testcase: bigOrderJoinsTest took 24.37 sec
+    [junit] Running simpledb.JoinPredicateTest
+    [junit] Testsuite: simpledb.JoinPredicateTest
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.115 sec
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.115 sec
+    [junit] 
+    [junit] Testcase: filterVaryingVals took 0.071 sec
+    [junit] Running simpledb.JoinTest
+    [junit] Testsuite: simpledb.JoinTest
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.099 sec
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.099 sec
+    [junit] 
+    [junit] Testcase: rewind took 0.046 sec
+    [junit] Testcase: eqJoin took 0.003 sec
+    [junit] Testcase: gtJoin took 0.004 sec
+    [junit] Testcase: getTupleDesc took 0.002 sec
+    [junit] Running simpledb.LockingTest
+    [junit] Testsuite: simpledb.LockingTest
+    [junit] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.626 sec
+    [junit] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.626 sec
+    [junit] 
+    [junit] Testcase: acquireReadLocksOnSamePage took 0.359 sec
+    [junit] Testcase: acquireReadWriteLocksOnSamePage took 0.158 sec
+    [junit] Testcase: acquireWriteReadLocksOnSamePage took 0.155 sec
+    [junit] Testcase: acquireReadWriteLocksOnTwoPages took 0.159 sec
+    [junit] Testcase: acquireWriteLocksOnTwoPages took 0.144 sec
+    [junit] Testcase: acquireReadLocksOnTwoPages took 0.148 sec
+    [junit] Testcase: lockUpgrade took 0.263 sec
+    [junit] Testcase: acquireWriteAndReadLocks took 0.138 sec
+    [junit] Testcase: acquireThenRelease took 0.037 sec
+    [junit] Running simpledb.PredicateTest
+    [junit] Testsuite: simpledb.PredicateTest
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.08 sec
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.08 sec
+    [junit] 
+    [junit] Testcase: filter took 0.043 sec
+    [junit] Running simpledb.RecordIdTest
+    [junit] Testsuite: simpledb.RecordIdTest
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.067 sec
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.067 sec
+    [junit] 
+    [junit] Testcase: equals took 0.02 sec
+    [junit] Testcase: tupleno took 0.001 sec
+    [junit] Testcase: hCode took 0 sec
+    [junit] Testcase: getPageId took 0.001 sec
+    [junit] Running simpledb.StringAggregatorTest
+    [junit] Testsuite: simpledb.StringAggregatorTest
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.081 sec
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.081 sec
+    [junit] 
+    [junit] Testcase: mergeCount took 0.04 sec
+    [junit] Testcase: testIterator took 0.002 sec
+    [junit] Running simpledb.TableStatsTest
+    [junit] Testsuite: simpledb.TableStatsTest
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.106 sec
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.106 sec
+    [junit] 
+    [junit] Testcase: estimateScanCostTest took 6.604 sec
+    [junit] Testcase: estimateTableCardinalityTest took 0.187 sec
+    [junit] Testcase: estimateSelectivityTest took 0.272 sec
+    [junit] Running simpledb.TransactionTest
+    [junit] Testsuite: simpledb.TransactionTest
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.409 sec
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.409 sec
+    [junit] 
+    [junit] Testcase: commitTransaction took 0.245 sec
+    [junit] Testcase: abortTransaction took 0.053 sec
+    [junit] Testcase: attemptTransactionTwice took 0.067 sec
+    [junit] Running simpledb.TupleDescTest
+    [junit] Testsuite: simpledb.TupleDescTest
+    [junit] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.147 sec
+    [junit] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.147 sec
+    [junit] 
+    [junit] Testcase: numFields took 0.036 sec
+    [junit] Testcase: nameToId took 0.051 sec
+    [junit] Testcase: testEquals took 0 sec
+    [junit] Testcase: combine took 0.001 sec
+    [junit] Testcase: getType took 0.005 sec
+    [junit] Testcase: getSize took 0.005 sec
+    [junit] Running simpledb.TupleTest
+    [junit] Testsuite: simpledb.TupleTest
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.059 sec
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.059 sec
+    [junit] 
+    [junit] Testcase: modifyFields took 0.022 sec
+    [junit] Testcase: getTupleDesc took 0.001 sec
+    [junit] Testcase: modifyRecordId took 0.001 sec
+
+BUILD SUCCESSFUL
+Total time: 1 minute 29 seconds
+
+niuzixiong@niuzixiong-virtual-machine:~/Downloads/DBlab/acmdb-lab5$ ant systemtest
+Buildfile: /home/niuzixiong/Downloads/DBlab/acmdb-lab5/build.xml
+
+compile:
+
+testcompile:
+
+systemtest:
+    [junit] Running simpledb.systemtest.AbortEvictionTest
+    [junit] Testsuite: simpledb.systemtest.AbortEvictionTest
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.408 sec
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.408 sec
+    [junit] 
+    [junit] Testcase: testDoNotEvictDirtyPages took 0.37 sec
+    [junit] Running simpledb.systemtest.AggregateTest
+    [junit] Testsuite: simpledb.systemtest.AggregateTest
+    [junit] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.469 sec
+    [junit] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.469 sec
+    [junit] 
+    [junit] Testcase: testSum took 0.212 sec
+    [junit] Testcase: testMin took 0.043 sec
+    [junit] Testcase: testMax took 0.047 sec
+    [junit] Testcase: testCount took 0.052 sec
+    [junit] Testcase: testAverage took 0.03 sec
+    [junit] Testcase: testAverageNoGroup took 0.027 sec
+    [junit] Running simpledb.systemtest.BTreeFileDeleteTest
+    [junit] Testsuite: simpledb.systemtest.BTreeFileDeleteTest
+    [junit] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.238 sec
+    [junit] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.238 sec
+    [junit] 
+    [junit] Testcase: testRedistributeInternalPages took 16.363 sec
+    [junit] Testcase: testDeleteInternalPages took 1.573 sec
+    [junit] Testcase: testMergeLeafPages took 0.08 sec
+    [junit] Testcase: testDeleteRootPage took 0.05 sec
+    [junit] Testcase: testReuseDeletedPages took 0.085 sec
+    [junit] Testcase: testRedistributeLeafPages took 0.031 sec
+    [junit] Running simpledb.systemtest.BTreeFileInsertTest
+    [junit] Testsuite: simpledb.systemtest.BTreeFileInsertTest
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.58 sec
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.58 sec
+    [junit] 
+    [junit] Testcase: addDuplicateTuples took 0.696 sec
+    [junit] Testcase: testSplitLeafPage took 0.088 sec
+    [junit] Testcase: testSplitRootPage took 8.846 sec
+    [junit] Testcase: testSplitInternalPage took 0.81 sec
+    [junit] Testcase: addTuple took 0.081 sec
+    [junit] Running simpledb.systemtest.BTreeScanTest
+    [junit] Testsuite: simpledb.systemtest.BTreeScanTest
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.668 sec
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.668 sec
+    [junit] 
+    [junit] Testcase: testRewind took 0.3 sec
+    [junit] Testcase: testRewindPredicates took 0.105 sec
+    [junit] Testcase: testReadPage took 0.595 sec
+    [junit] Testcase: testSmall took 3.615 sec
+    [junit] Running simpledb.systemtest.BTreeTest
+    [junit] Testsuite: simpledb.systemtest.BTreeTest
+
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 29.169 sec
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 29.169 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] Creating large random B+ tree...
+    [junit] Inserting tuples...
+    [junit] Inserting and deleting tuples...
+    [junit] Deleting tuples...
+    [junit] Inserting tuples...
+    [junit] Searching for tuples...
+    [junit] Performing sanity checks...
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testBigFile took 29.131 sec
+    [junit] Running simpledb.systemtest.DeleteTest
+    [junit] Testsuite: simpledb.systemtest.DeleteTest
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.601 sec
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.601 sec
+    [junit] 
+    [junit] Testcase: testEquals took 0.285 sec
+    [junit] Testcase: testLessThan took 0.082 sec
+    [junit] Testcase: testLessThanOrEq took 0.07 sec
+    [junit] Testcase: testGreaterThan took 0.059 sec
+    [junit] Testcase: testGreaterThanOrEq took 0.051 sec
+    [junit] Running simpledb.systemtest.EvictionTest
+    [junit] Testsuite: simpledb.systemtest.EvictionTest
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.941 sec
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.941 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] EvictionTest creating large table
+    [junit] EvictionTest scanning large table
+    [junit] EvictionTest scan complete, testing memory usage of scan
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testHeapFileScanWithManyPages took 3.905 sec
+    [junit] Running simpledb.systemtest.FilterTest
+    [junit] Testsuite: simpledb.systemtest.FilterTest
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.497 sec
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.497 sec
+    [junit] 
+    [junit] Testcase: testGreaterThanOrEq took 0.223 sec
+    [junit] Testcase: testEquals took 0.066 sec
+    [junit] Testcase: testLessThan took 0.047 sec
+    [junit] Testcase: testLessThanOrEq took 0.049 sec
+    [junit] Testcase: testGreaterThan took 0.054 sec
+    [junit] Running simpledb.systemtest.HashEquiJoinTest
+    [junit] Testsuite: simpledb.systemtest.HashEquiJoinTest
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.206 sec
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.206 sec
+    [junit] 
+    [junit] Testcase: testSingleMatch took 0.135 sec
+    [junit] Testcase: testNoMatch took 0.014 sec
+    [junit] Testcase: testMultipleMatch took 0.014 sec
+    [junit] Running simpledb.systemtest.InsertTest
+    [junit] Testsuite: simpledb.systemtest.InsertTest
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.255 sec
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.255 sec
+    [junit] 
+    [junit] Testcase: testEmptyToEmpty took 0.159 sec
+    [junit] Testcase: testEmptyToOne took 0.019 sec
+    [junit] Testcase: testOneToEmpty took 0.016 sec
+    [junit] Testcase: testOneToOne took 0.015 sec
+    [junit] Running simpledb.systemtest.JoinTest
+    [junit] Testsuite: simpledb.systemtest.JoinTest
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.224 sec
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.224 sec
+    [junit] 
+    [junit] Testcase: testSingleMatch took 0.158 sec
+    [junit] Testcase: testNoMatch took 0.014 sec
+    [junit] Testcase: testMultipleMatch took 0.011 sec
+    [junit] Running simpledb.systemtest.QueryTest
+    [junit] Testsuite: simpledb.systemtest.QueryTest
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.056 sec
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.056 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] Started a new transaction tid = 5
+    [junit] Added scan of table emp
+    [junit] Added scan of table dept
+    [junit] Added scan of table hobbies
+    [junit] Added scan of table hobby
+    [junit] Added join between emp.c1 and dept.c0
+    [junit] Added join between hobbies.c0 and emp.c2
+    [junit] Added join between hobbies.c1 and hobby.c0
+    [junit] Added select list field null.*
+    [junit] The query plan is:
+    [junit]                                        π(hobbies.c0,hobbies.c1,emp.c0,emp.c1,emp.c2,emp.c3,emp.c4,emp.c5,dept.c0,dept.c1,dept.c2,hobby.c0,hobby.c1,hobby.c2,hobby.c3,hobby.c4,hobby.c5),card:200000
+    [junit]                                        |
+    [junit]                                        ⨝(hobbies.c1=hobby.c0),card:200000
+    [junit]                 _______________________|_______________________
+    [junit]                 |                                             |
+    [junit]                 ⨝(hobbies.c0=emp.c2),card:200000              |
+    [junit]   ______________|_______________                              |
+    [junit]   |                            |                              |
+    [junit]   |                            ⨝(emp.c1=dept.c0),card:1529    |
+    [junit]   |              ______________|______________                |
+    [junit]   |              |                           |                |
+    [junit]   |              σ(emp.c3<1000),card:1529    |                |
+    [junit] scan(hobbies)    |                           |                |
+    [junit]                scan(emp)                   scan(dept)       scan(hobby)
+    [junit] 
+    [junit] hobbies.c0	hobbies.c1	emp.c0	emp.c1	emp.c2	emp.c3	emp.c4	emp.c5	dept.c0	dept.c1	dept.c2	hobby.c0	hobby.c1	hobby.c2	hobby.c3	hobby.c4	hobby.c5	
+    [junit] ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    [junit] hobbies.c0(15650)	hobbies.c1(55129)	emp.c0(7582)	emp.c1(26083)	emp.c2(15650)	emp.c3(42)	emp.c4(52502)	emp.c5(63234)	dept.c0(26083)	dept.c1(55723)	dept.c2(54218)	hobby.c0(55129)	hobby.c1(37349)	hobby.c2(790)	hobby.c3(38037)	hobby.c4(8029)	hobby.c5(48137)	
+    [junit] 
+    [junit]  1 rows.
+    [junit] Transaction 5 committed.
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: queryTest took 8.023 sec
+    [junit] Running simpledb.systemtest.ScanTest
+    [junit] Testsuite: simpledb.systemtest.ScanTest
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.01 sec
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.01 sec
+    [junit] 
+    [junit] Testcase: testCache took 1.111 sec
+    [junit] Testcase: testRewind took 0.017 sec
+    [junit] Testcase: testSmall took 0.837 sec
+    [junit] Running simpledb.systemtest.TransactionTest
+    [junit] Testsuite: simpledb.systemtest.TransactionTest
+
+
+
+^[[D^[[    [junit] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.859 sec
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.859 sec
+    [junit] 
+    [junit] Testcase: testSingleThread took 0.171 sec
+    [junit] Testcase: testTwoThreads took 0.689 sec
+    [junit] Testcase: testFiveThreads took 4.322 sec
+    [junit] Testcase: testTenThreads took 11.504 sec
+    [junit] Testcase: testAllDirtyFails took 0.128 sec
+ 
+BUILD SUCCESSFUL
+Total time: 1 minute 46 seconds
+
+
